@@ -33,17 +33,18 @@ function formRansomNote(){
 
         for (let j = 0; j < ransomNoteSplit.length; j++) {
 
-            if( ransomNoteSplit[i] in wordFreq && wordFreq[magazineSplit[i]] > 0){
+            if( ransomNoteSplit[i] in wordFreq || wordFreq[magazineSplit[i]] > 0){
     
                 wordFreq[magazineSplit[i]]--
-                return true
-            }else{
+            } else{
                 return false
             }
                 
         }
 
     }
+
+    return true;
 
 
 }
